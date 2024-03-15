@@ -1,14 +1,11 @@
 package ref;
-
 import java.util.Scanner;
-
 public class Practice1 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("입력할 상품의 개수를 입력해주세요");
         int c = scanner.nextInt();
         scanner.nextLine();
-
         ProductOrder orders[] = new ProductOrder[c];
 
         for (int i = 0; i < orders.length; i++) {
@@ -47,7 +44,7 @@ public class Practice1 {
     }
     static void printOrder(ProductOrder[] orders){
         for (ProductOrder order : orders) {
-            System.out.println("상품명 :" + order.productName+ " || 가격 :"+order.price+" || 수량 : "+order.quantity);
+            System.out.println("상품명 :" + order.productName+ " || 가격 :"+order.price+" || 수량 : "+order.quantity +" || 해당 항목의 합계 는 "+(order.price*order.quantity));
 
         }
     }
